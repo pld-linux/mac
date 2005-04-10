@@ -1,0 +1,22 @@
+diff -ruN mac-3.99-u4-b2./src/Console/Makefile.am mac-3.99-u4-b2/src/Console/Makefile.am
+--- mac-3.99-u4-b2./src/Console/Makefile.am	2005-03-31 13:11:00.000000000 +0200
++++ mac-3.99-u4-b2/src/Console/Makefile.am	2005-04-10 20:12:53.916537800 +0200
+@@ -4,7 +4,6 @@
+ 
+ INCLUDES = -I$(top_srcdir)/src/Shared -I$(top_srcdir)/src/MACLib
+ 
+-AM_LDFLAGS = -all-static
+ LDADD = $(top_builddir)/src/MACLib/libmac.la
+ 
+ mac_SOURCES = Console.cpp
+diff -ruN mac-3.99-u4-b2./src/Console/Makefile.in mac-3.99-u4-b2/src/Console/Makefile.in
+--- mac-3.99-u4-b2./src/Console/Makefile.in	2005-04-02 15:39:34.000000000 +0200
++++ mac-3.99-u4-b2/src/Console/Makefile.in	2005-04-10 20:13:04.932863064 +0200
+@@ -173,7 +173,6 @@
+ target_alias = @target_alias@
+ AUTOMAKE_OPTIONS = gnu
+ INCLUDES = -I$(top_srcdir)/src/Shared -I$(top_srcdir)/src/MACLib
+-AM_LDFLAGS = -all-static
+ LDADD = $(top_builddir)/src/MACLib/libmac.la
+ mac_SOURCES = Console.cpp
+ all: all-am

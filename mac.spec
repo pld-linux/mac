@@ -27,6 +27,7 @@ Summary:	MAC header files
 Summary(pl):	Pliki nag³ówkowe MAC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libstdc++-devel
 
 %description devel
 MAC header files.

@@ -1,6 +1,6 @@
 %define		_ver	3.99-u4-b2
 Summary:	Monkey's Audio Codec, a lossless audio codec
-Summary(pl):	Monkey's Audio Codec, bezstratny kodek d¼wiêku
+Summary(pl):	Monkey's Audio Codec - bezstratny kodek d¼wiêku
 Name:		mac
 Version:	3.99.u4.b2
 Release:	1
@@ -8,6 +8,7 @@ License:	Distributable with author's permission
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mac-port/%{name}-%{_ver}.tar.gz
 # NoSource0-md5:	d4a9a357d9300f585848efab584d046f
+NoSource:	0
 Patch0:		%{name}-shared.patch
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	libstdc++-devel
@@ -56,7 +57,8 @@ Biblioteki statyczne MAC.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,9 +74,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
-%{_libdir}/*.so
+%{_includedir}/*
 
 %files static
 %defattr(644,root,root,755)

@@ -12,6 +12,8 @@ NoSource:	0
 Patch0:		%{name}-shared.patch
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	libstdc++-devel
+BuildRequires:	nasm
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

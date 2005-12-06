@@ -1,12 +1,13 @@
-%define		_ver	3.99-u4-b2
+%define		_ver	3.99-u4-b4
 Summary:	Monkey's Audio Codec, a lossless audio codec
 Summary(pl):	Monkey's Audio Codec - bezstratny kodek d¼wiêku
 Name:		mac
-Version:	3.99.u4.b2
+Version:	3.99.u4.b4
 Release:	1
 License:	Distributable with author's permission
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mac-port/%{name}-%{_ver}.tar.gz
+# Source0-md5:	7eab2b9cc4bb696452d6c147976294b5
 # NoSource0-md5:	d4a9a357d9300f585848efab584d046f
 NoSource:	0
 Patch0:		%{name}-shared.patch
@@ -51,7 +52,7 @@ Biblioteki statyczne MAC.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-%patch0 -p1
+#%patch0 -p1
 
 %build
 %configure

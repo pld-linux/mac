@@ -10,7 +10,6 @@ Source0:	http://dl.sourceforge.net/mac-port/%{name}-%{_ver}.tar.gz
 # Source0-md5:	7eab2b9cc4bb696452d6c147976294b5
 # NoSource0-md5:	d4a9a357d9300f585848efab584d046f
 NoSource:	0
-Patch0:		%{name}-shared.patch
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	libstdc++-devel
 BuildRequires:	nasm
@@ -52,7 +51,6 @@ Biblioteki statyczne MAC.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-#%patch0 -p1
 
 %build
 %configure

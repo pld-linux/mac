@@ -7,8 +7,7 @@ Release:	1
 License:	Distributable with author's permission
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mac-port/%{name}-%{_ver}.tar.gz
-# Source0-md5:	7eab2b9cc4bb696452d6c147976294b5
-# NoSource0-md5:	d4a9a357d9300f585848efab584d046f
+# NoSource0-md5:	7eab2b9cc4bb696452d6c147976294b5
 NoSource:	0
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	libstdc++-devel

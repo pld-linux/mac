@@ -1,18 +1,20 @@
-%define		_ver	3.99-u4-b4
+%define		_ver	3.99-u4-b5
 Summary:	Monkey's Audio Codec, a lossless audio codec
 Summary(pl):	Monkey's Audio Codec - bezstratny kodek d¼wiêku
 Name:		mac
-Version:	3.99.u4.b4
+Version:	3.99.u4.b5
 Release:	1
 License:	Distributable with author's permission
 Group:		Applications/Multimedia
 Source0:	http://dl.sourceforge.net/mac-port/%{name}-%{_ver}.tar.gz
-# NoSource0-md5:	7eab2b9cc4bb696452d6c147976294b5
+# NoSource0-md5:	75716b342e07deae58f56a2522362006
 NoSource:	0
 URL:		http://sourceforge.net/projects/mac-port/
 BuildRequires:	libstdc++-devel
-BuildRequires:	nasm
-ExclusiveArch:	%{ix86}
+%ifarch %{ix86} %{x8664}
+BuildRequires:	yasm
+%endif
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,6 +53,8 @@ Biblioteki statyczne MAC.
 %prep
 %setup -q -n %{name}-%{_ver}
 
+sed -i -e 's/-O3 //' configure
+
 %build
 %configure
 %{__make}
@@ -70,15 +74,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README TODO src/{Credits.txt,History.txt,License.htm,Readme.htm}
-%attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/*.so.*.*
+%attr(755,root,root) %{_bindir}/mac
+%attr(755,root,root) %{_libdir}/libmac.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libmac.so
+%{_libdir}/libmac.la
+%{_includedir}/mac
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libmac.a

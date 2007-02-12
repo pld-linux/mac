@@ -1,6 +1,6 @@
 %define		_ver	3.99-u4-b5
 Summary:	Monkey's Audio Codec, a lossless audio codec
-Summary(pl):	Monkey's Audio Codec - bezstratny kodek d¼wiêku
+Summary(pl.UTF-8):   Monkey's Audio Codec - bezstratny kodek dÅºwiÄ™ku
 Name:		mac
 Version:	3.99.u4.b5
 Release:	1
@@ -21,13 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 MAC: short for Monkey's Audio Codec, a lossless audio codec (almost
 always with the .ape extension).
 
-%description -l pl
-MAC: skrót Monkey's Audio Codec, bezstratny kodek d¼wiêku (prawie
+%description -l pl.UTF-8
+MAC: skrÃ³t Monkey's Audio Codec, bezstratny kodek dÅºwiÄ™ku (prawie
 zawsze z rozszerzeniem .ape).
 
 %package devel
 Summary:	MAC header files
-Summary(pl):	Pliki nag³ówkowe MAC
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe MAC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -35,19 +35,19 @@ Requires:	libstdc++-devel
 %description devel
 MAC header files.
 
-%description devel -l pl
-Pliki nag³ówkowe MAC.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe MAC.
 
 %package static
 Summary:	Static MAC libraries
-Summary(pl):	Biblioteki statyczne MAC
+Summary(pl.UTF-8):   Biblioteki statyczne MAC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static MAC libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne MAC.
 
 %prep

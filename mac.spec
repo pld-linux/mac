@@ -1,6 +1,6 @@
 %define		_ver	3.99-u4-b5
 Summary:	Monkey's Audio Codec, a lossless audio codec
-Summary(pl.UTF-8):   Monkey's Audio Codec - bezstratny kodek dźwięku
+Summary(pl.UTF-8):	Monkey's Audio Codec - bezstratny kodek dźwięku
 Name:		mac
 Version:	3.99.u4.b5
 Release:	1
@@ -27,7 +27,7 @@ zawsze z rozszerzeniem .ape).
 
 %package devel
 Summary:	MAC header files
-Summary(pl.UTF-8):   Pliki nagłówkowe MAC
+Summary(pl.UTF-8):	Pliki nagłówkowe MAC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -40,7 +40,7 @@ Pliki nagłówkowe MAC.
 
 %package static
 Summary:	Static MAC libraries
-Summary(pl.UTF-8):   Biblioteki statyczne MAC
+Summary(pl.UTF-8):	Biblioteki statyczne MAC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 

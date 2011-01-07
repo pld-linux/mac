@@ -10,6 +10,7 @@ Source0:	http://supermmx.org/download/linux/mac/%{name}-%{_ver}.tar.gz
 # NoSource0-md5:	75716b342e07deae58f56a2522362006
 NoSource:	0
 URL:		http://sourceforge.net/projects/mac-port/
+Patch0:		%{name}_amd64.patch
 BuildRequires:	libstdc++-devel
 %ifarch %{ix86} %{x8664}
 BuildRequires:	yasm
@@ -52,7 +53,9 @@ Biblioteki statyczne MAC.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-
+%ifarch %{x8664}
+%patch0 -p1
+%endif
 sed -i -e 's/-O3 //' configure
 
 %build

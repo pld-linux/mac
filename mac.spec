@@ -6,7 +6,7 @@ Version:	3.99.u4.b5
 Release:	1
 License:	Distributable with author's permission
 Group:		Applications/Multimedia
-Source0:	http://supermmx.org/download/linux/mac/%{name}-%{_ver}.tar.gz
+Source0:        http://supermmx.org/resources/linux/mac/%{name}-%{_ver}.tar.gz
 # NoSource0-md5:	75716b342e07deae58f56a2522362006
 NoSource:	0
 URL:		http://sourceforge.net/projects/mac-port/

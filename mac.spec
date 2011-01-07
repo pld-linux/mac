@@ -53,9 +53,7 @@ Biblioteki statyczne MAC.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-%ifarch %{x8664}
 %patch0 -p1
-%endif
 sed -i -e 's/-O3 //' configure
 
 %build

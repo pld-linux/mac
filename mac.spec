@@ -53,7 +53,7 @@ Biblioteki statyczne MAC.
 
 %prep
 %setup -q -n %{name}-%{_ver}
-%patch0 -p1
+%patch -P0 -p1
 sed -i -e 's/-O3 //' configure
 
 %build
